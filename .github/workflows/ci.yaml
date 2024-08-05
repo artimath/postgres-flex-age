@@ -93,7 +93,7 @@ jobs:
       #       flyio/postgres-flex-timescaledb:16.3
       -
         name: Build and push Postgres 16 AGE
-        id: docker_build_16_age
+        id: docker_build_16_timescaledb_age
         uses: docker/build-push-action@v3
         with:
           build-args: |
@@ -120,5 +120,5 @@ jobs:
       #   run: echo ${{ steps.docker_build_16_timescaledb.outputs.digest }}
 
       - name: Postgres 16 TimescaleDB AGE Image digest
-        run: echo ${{ steps.docker_build_16_age.outputs.digest }}
+        run: echo ${{ steps.docker_build_16_timescaledb_age.outputs.digest }}
 
