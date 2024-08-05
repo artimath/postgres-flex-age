@@ -67,7 +67,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 # Apache AGE
 RUN curl -L https://github.com/apache/age/releases/download/PG14%2Fv1.5.0-rc0/apache-age-1.5.0-src.tar.gz -o apache-age-1.5.0-src.tar.gz && \
     tar xvf apache-age-1.5.0-src.tar.gz && \
-    cd apache-age-1.5.0-src && \
+    cd apache-age-1.5.0 && \
     make install
 
 # Haproxy
