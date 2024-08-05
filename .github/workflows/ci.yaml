@@ -106,16 +106,19 @@ jobs:
           tags: |
             artimath/postgres-flex-timescaledb-age:16
             artimath/postgres-flex-timescaledb-age:16.3
-      -
-        name: Postgres 15 Image digest
-        run: echo ${{ steps.docker_build_15.outputs.digest }}
-      -
-        name: Postgres 15 TimescaleDB Image digest
-        run: echo ${{ steps.docker_build_15_timescaledb.outputs.digest }}
-      -
-        name: Postgres 16 Image digest
-        run: echo ${{ steps.docker_build_16.outputs.digest }}
-      -
-        name: Postgres 16 TimescaleDB Image digest
-        run: echo ${{ steps.docker_build_16_timescaledb.outputs.digest }}
+      # -
+      #   name: Postgres 15 Image digest
+      #   run: echo ${{ steps.docker_build_15.outputs.digest }}
+      # -
+      #   name: Postgres 15 TimescaleDB Image digest
+      #   run: echo ${{ steps.docker_build_15_timescaledb.outputs.digest }}
+      # -
+      #   name: Postgres 16 Image digest
+      #   run: echo ${{ steps.docker_build_16.outputs.digest }}
+      # -
+      #   name: Postgres 16 TimescaleDB Image digest
+      #   run: echo ${{ steps.docker_build_16_timescaledb.outputs.digest }}
+
+      - name: Postgres 16 TimescaleDB AGE Image digest
+        run: echo ${{ steps.docker_build_16_age.outputs.digest }}
 
